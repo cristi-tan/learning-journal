@@ -1,0 +1,26 @@
+import requests
+
+# GET request
+response = requests.get("https://jsonplaceholder.typicode.com/posts/1")
+print("GET status:", response.status_code)
+print("GET body:", response.json())
+
+# POST request
+data = {"title": "Hello", "body": "World", "userId": 1}
+response = requests.post("https://jsonplaceholder.typicode.com/posts", json=data)
+print("\nPOST response:", response.json())
+
+# PUT request
+data = {"title": "Updated title"}
+response = requests.put("https://jsonplaceholder.typicode.com/posts/1", json=data)
+print("\nPUT response:", response.json())
+
+# DELETE request
+response = requests.delete("https://jsonplaceholder.typicode.com/posts/1")
+print("\nDELETE status:", response.status_code)
+
+# Handling JSON from the FIRST GET, not from DELETE
+response = requests.get("https://jsonplaceholder.typicode.com/posts/1")
+result = response.json()
+title = result["title"]
+print("\nTitle from GET:", title)

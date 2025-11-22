@@ -1,0 +1,10 @@
+import requests
+
+response = requests.get("https://jsonplaceholder.typicode.com/users/1")
+data = response.json()
+
+print("Name:", data["name"])
+print("Username:", data["username"])
+print("Email:", data["email"])
+
+

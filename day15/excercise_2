@@ -1,0 +1,9 @@
+import requests
+
+response = requests.get("https://jsonplaceholder.typicode.com/posts")
+posts = response.json() # This is a list of dictionaries
+
+# Print the first 5 titles
+for post in posts[:5]:
+    print(post["title"])
+
