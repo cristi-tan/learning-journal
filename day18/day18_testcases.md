@@ -181,7 +181,7 @@ Environment: Test
 
 Browser: Chrome 119
 
-OS: Windows 10
+OS: Windows 11
 
 App Version: v1.0.3
 
