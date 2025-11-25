@@ -1,43 +1,43 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-import time
+import pytest
+from pages.login_page import LoginPage
+from pages.secure_page import SecurePage
 
-def test_valid_login():
-    driver = webdriver.Chrome()
-    driver.get("https://practicetestautomation.com/practice-test-login/")
+valid_login_data = [
+    ("student", "Password123"),
+]
 
-    # Find username field
-    username_field = driver.find_element(By.ID, "username")
-    username_field.send_keys("student")
+@pytest.mark.parametrize("username,password", valid_login_data)
+def test_valid_login_param(driver, username, password):
+    login = LoginPage(driver)
+    login.open()
+    login.enter_username(username)
+    login.enter_password(password)
+    login.click_login()
 
-    # Find password field
-    password_field = driver.find_element(By.ID, "password")
-    password_field.send_keys("Password123")
+    secure = SecurePage(driver)
+    secure.wait_until_logged_in()
 
-    # Click login
-    login_button = driver.find_element(By.ID, "submit")
-    login_button.click()
+    assert "logged-in-successfully" in secure.current_url()
 
-    time.sleep(2)  # wait for page load
 
-    # Assertion
-    expected_url = "https://practicetestautomation.com/logged-in-successfully/"
-    assert driver.current_url == expected_url
 
-    driver.quit()
+invalid_login_data = [
+    ("student", "WrongPass", "Your password is invalid!"),
+    ("wronguser", "Password123", "Your username is invalid!"),
+    ("", "Password123", "Your username is invalid!"),
+    ("student", "", "Your password is invalid!"),
+]
 
-def test_invalid_password():
-    driver = webdriver.Chrome()
-    driver.get("https://practicetestautomation.com/practice-test-login/")
+@pytest.mark.parametrize("username,password,expected_error", invalid_login_data)
+def test_invalid_login_scenarios(driver, username, password, expected_error):
+    login = LoginPage(driver)
+    login.open()
 
-    driver.find_element(By.ID, "username").send_keys("student")
-    driver.find_element(By.ID, "password").send_keys("WrongPass")
-    driver.find_element(By.ID, "submit").click()
+    login.enter_username(username)
+    login.enter_password(password)
+    login.click_login()
 
-    time.sleep(2)
+    error = login.get_error().strip()
+    assert expected_error in error
 
-    error = driver.find_element(By.ID, "error").text
-    assert error == "Your password is invalid!"
-
-    driver.quit()
 

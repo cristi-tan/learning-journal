@@ -1,0 +1,32 @@
+2025-11-24 14:51:28,625 - TestLogin - INFO - Starting test_valid_login
+2025-11-24 14:51:31,648 - LoginPage - INFO - Typing into element ('id', 'username'): 'student'
+2025-11-24 14:51:31,648 - LoginPage - INFO - Waiting for visibility of element: ('id', 'username')
+2025-11-24 14:51:31,767 - LoginPage - INFO - Typing into element ('id', 'password'): 'Password123'
+2025-11-24 14:51:31,768 - LoginPage - INFO - Waiting for visibility of element: ('id', 'password')
+2025-11-24 14:51:31,857 - LoginPage - INFO - Clicking on element: ('id', 'submit')
+2025-11-24 14:51:31,857 - LoginPage - INFO - Waiting for element to be clickable: ('id', 'submit')
+2025-11-24 14:51:32,626 - SecurePage - INFO - Waiting for URL to contain: 'logged-in-successfully'
+2025-11-24 14:51:32,643 - TestLogin - INFO - test_valid_login passed
+2025-11-24 14:51:37,053 - LoginPage - INFO - Typing into element ('id', 'username'): 'student'
+2025-11-24 14:51:37,054 - LoginPage - INFO - Waiting for visibility of element: ('id', 'username')
+2025-11-24 14:51:39,079 - LoginPage - INFO - Typing into element ('id', 'password'): 'WrongPass'
+2025-11-24 14:51:39,080 - LoginPage - INFO - Waiting for visibility of element: ('id', 'password')
+2025-11-24 14:51:39,171 - LoginPage - INFO - Clicking on element: ('id', 'submit')
+2025-11-24 14:51:39,171 - LoginPage - INFO - Waiting for element to be clickable: ('id', 'submit')
+2025-11-24 14:51:39,284 - LoginPage - INFO - Waiting for visibility of element: ('id', 'error')
+2025-11-24 15:51:51,223 - TestLogin - INFO - Starting test_valid_login
+2025-11-24 15:51:53,919 - LoginPage - INFO - Typing into element ('id', 'username'): 'student'
+2025-11-24 15:51:53,927 - LoginPage - INFO - Waiting for visibility of element: ('id', 'username')
+2025-11-24 15:51:54,060 - LoginPage - INFO - Typing into element ('id', 'password'): 'Password123'
+2025-11-24 15:51:54,061 - LoginPage - INFO - Waiting for visibility of element: ('id', 'password')
+2025-11-24 15:51:54,147 - LoginPage - INFO - Clicking on element: ('id', 'submit')
+2025-11-24 15:51:54,147 - LoginPage - INFO - Waiting for element to be clickable: ('id', 'submit')
+2025-11-24 15:51:54,894 - SecurePage - INFO - Waiting for URL to contain: 'logged-in-successfully'
+2025-11-24 15:51:54,913 - TestLogin - INFO - test_valid_login passed
+2025-11-24 15:52:00,631 - LoginPage - INFO - Typing into element ('id', 'username'): 'student'
+2025-11-24 15:52:00,631 - LoginPage - INFO - Waiting for visibility of element: ('id', 'username')
+2025-11-24 15:52:00,745 - LoginPage - INFO - Typing into element ('id', 'password'): 'WrongPass'
+2025-11-24 15:52:00,745 - LoginPage - INFO - Waiting for visibility of element: ('id', 'password')
+2025-11-24 15:52:00,832 - LoginPage - INFO - Clicking on element: ('id', 'submit')
+2025-11-24 15:52:00,832 - LoginPage - INFO - Waiting for element to be clickable: ('id', 'submit')
+2025-11-24 15:52:00,949 - LoginPage - INFO - Waiting for visibility of element: ('id', 'error')
