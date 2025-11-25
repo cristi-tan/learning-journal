@@ -1,0 +1,24 @@
+2025-11-25 08:40:46,799 - TestLogin - INFO - Starting test_valid_login
+2025-11-25 08:40:48,898 - LoginPage - INFO - Waiting for visibility of element: ('id', 'username')
+2025-11-25 08:40:49,017 - LoginPage - INFO - Waiting for visibility of element: ('id', 'password')
+2025-11-25 08:40:49,084 - LoginPage - INFO - Clicking on element: ('id', 'submit')
+2025-11-25 08:40:49,084 - LoginPage - INFO - Waiting for element to be clickable: ('id', 'submit')
+2025-11-25 08:40:49,781 - SecurePage - INFO - Waiting for URL to contain: 'logged-in-successfully'
+2025-11-25 08:40:49,788 - TestLogin - INFO - test_valid_login passed
+2025-11-25 08:40:55,908 - LoginPage - INFO - Waiting for visibility of element: ('id', 'username')
+2025-11-25 08:40:55,981 - LoginPage - INFO - Waiting for visibility of element: ('id', 'password')
+2025-11-25 08:40:56,039 - LoginPage - INFO - Clicking on element: ('id', 'submit')
+2025-11-25 08:40:56,039 - LoginPage - INFO - Waiting for element to be clickable: ('id', 'submit')
+2025-11-25 08:40:56,091 - LoginPage - INFO - Waiting for visibility of element: ('id', 'error')
+2025-11-25 08:48:14,615 - TestLogin - INFO - Starting test_valid_login
+2025-11-25 08:48:16,918 - LoginPage - INFO - Waiting for visibility of element: ('id', 'username')
+2025-11-25 08:48:16,991 - LoginPage - INFO - Waiting for visibility of element: ('id', 'password')
+2025-11-25 08:48:17,047 - LoginPage - INFO - Clicking on element: ('id', 'submit')
+2025-11-25 08:48:17,047 - LoginPage - INFO - Waiting for element to be clickable: ('id', 'submit')
+2025-11-25 08:48:17,694 - SecurePage - INFO - Waiting for URL to contain: 'logged-in-successfully'
+2025-11-25 08:48:17,703 - TestLogin - INFO - test_valid_login passed
+2025-11-25 08:48:24,239 - LoginPage - INFO - Waiting for visibility of element: ('id', 'username')
+2025-11-25 08:48:24,311 - LoginPage - INFO - Waiting for visibility of element: ('id', 'password')
+2025-11-25 08:48:24,378 - LoginPage - INFO - Clicking on element: ('id', 'submit')
+2025-11-25 08:48:24,378 - LoginPage - INFO - Waiting for element to be clickable: ('id', 'submit')
+2025-11-25 08:48:24,432 - LoginPage - INFO - Waiting for visibility of element: ('id', 'error')
